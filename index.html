@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no">
+
+    <title>Dodge Rush 2D</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MENU UTAMA
+    ========================== -->
+
+    <div id="menu" class="screen">
+
+        <div class="card">
+
+            <div class="logo">🚀</div>
+
+            <h1>DODGE RUSH</h1>
+
+            <p class="subtitle">
+                2D Web Game
+            </p>
+
+
+            <input
+                id="username"
+                type="text"
+                placeholder="Masukkan Username"
+                maxlength="15"
+                autocomplete="off"
+            >
+
+
+            <input
+                id="whatsapp"
+                type="tel"
+                placeholder="Nomor WhatsApp"
+                maxlength="15"
+                inputmode="numeric"
+                autocomplete="off"
+            >
+
+
+            <button
+                id="startBtn"
+                class="btn blue">
+
+                ▶ MULAI BERMAIN
+
+            </button>
+
+
+            <button
+                id="leaderboardBtn"
+                class="btn orange">
+
+                🏆 LEADERBOARD
+
+            </button>
+
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         GAME
+    ========================== -->
+
+    <div id="gameScreen"
+         class="screen hidden">
+
+        <div class="game-header">
+
+            <div>
+                👤
+                <span id="playerName">
+                    Player
+                </span>
+            </div>
+
+
+            <div>
+                ⭐
+                <span id="score">
+                    0
+                </span>
+            </div>
+
+        </div>
+
+
+        <canvas id="gameCanvas"></canvas>
+
+
+        <div class="controls">
+
+            <button
+                id="leftBtn"
+                class="control-btn">
+
+                ⬅
+
+            </button>
+
+
+            <button
+                id="rightBtn"
+                class="control-btn">
+
+                ➡
+
+            </button>
+
+        </div>
+
+
+        <p class="instruction">
+            Hindari kotak merah!
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         GAME OVER
+    ========================== -->
+
+    <div id="gameOver"
+         class="screen hidden">
+
+        <div class="card">
+
+            <div class="logo">
+                💥
+            </div>
+
+
+            <h1>
+                GAME OVER
+            </h1>
+
+
+            <p>
+                Pemain
+            </p>
+
+
+            <h2 id="finalUsername">
+                Player
+            </h2>
+
+
+            <p>
+                SKOR
+            </p>
+
+
+            <div class="final-score">
+
+                <span id="finalScore">
+                    0
+                </span>
+
+            </div>
+
+
+            <p id="saveStatus">
+                Menyimpan skor...
+            </p>
+
+
+            <button
+                id="retryBtn"
+                class="btn blue">
+
+                🔄 MAIN LAGI
+
+            </button>
+
+
+            <button
+                id="gameOverLeaderboardBtn"
+                class="btn orange">
+
+                🏆 LEADERBOARD
+
+            </button>
+
+
+            <button
+                id="homeBtn"
+                class="btn dark">
+
+                🏠 MENU UTAMA
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         LEADERBOARD
+    ========================== -->
+
+    <div id="leaderboard"
+         class="screen hidden">
+
+        <div class="card leaderboard-card">
+
+            <h1>
+                🏆 LEADERBOARD
+            </h1>
+
+
+            <p class="subtitle">
+                TOP 10 PEMAIN
+            </p>
+
+
+            <div id="leaderboardData">
+
+                <p>
+                    Memuat data...
+                </p>
+
+            </div>
+
+
+            <button
+                id="refreshLeaderboardBtn"
+                class="btn blue">
+
+                🔄 REFRESH
+
+            </button>
+
+
+            <button
+                id="leaderboardHomeBtn"
+                class="btn dark">
+
+                🏠 KEMBALI
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="game.js"></script>
+
+</body>
+</html>
